@@ -1,0 +1,19 @@
+﻿@page
+@model googleLogin.Areas.Identity.Pages.Account.IndexModel;
+@{
+    ViewData["Title"] = "Главная";
+}
+<ul>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <li><a href="/profile">профиль</a></li>
+        <li>
+            <form method="post" action="/logout">
+                <button type="submit" class="btn btn-danger">Выйти</button>
+            </form>
+        </li>
+    }
+    else{
+        <li><a href="/login">Войти через Google</a></li>
+    }
+</ul>

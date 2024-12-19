@@ -1,0 +1,17 @@
+﻿@page
+@model ProfileModel
+@{
+    ViewData["Title"] = "Профиль";
+}
+<h1>@ViewData["Title"]</h1>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Имя: @Model.Name</p>
+    <p>Email: @Model.Email</p>
+}
+else
+{
+    <p>Вы не вошли в сиситему</p>
+    <a class="btn btn-primary" href="/login">Войти через гугл</a>
+
+}
