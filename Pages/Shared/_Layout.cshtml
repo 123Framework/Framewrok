@@ -30,7 +30,7 @@
                         </li>
 
                         
-                            @if (SignInManager.IsSignedIn(User))
+                            @if (User.Identity.IsAuthenticated)
                             {
                             <li><a href="/profile">профиль</a></li>
                             <li>
