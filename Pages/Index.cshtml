@@ -3,9 +3,9 @@
 @{
     ViewData["Title"] = "Главная";
 }
+<!--
 <ul>
-    @if (User.Identity.IsAuthenticated)
-    {
+  
         <li><a href="/profile">профиль</a></li>
         <li>
             <form method="post" action="/logout">
@@ -18,3 +18,7 @@
         <li><a href="/login">Войти через Google</a></li>
     }
 </ul>
+-->
+
+<a class="btn btn-primary" href="/login">Войти через гугл</a>
+<a class="btn btn-primary" href="/logout">Выйти</a>

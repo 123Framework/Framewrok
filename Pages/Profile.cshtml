@@ -4,7 +4,8 @@
     ViewData["Title"] = "Профиль";
 }
 <h1>@ViewData["Title"]</h1>
-@if (User.Identity.IsAuthenticated)
+<a class="btn btn-primary" href="/logout">Выйти</a>
+@if (Model.IsAuthenticated)
 {
     <p>Имя: @Model.Name</p>
     <p>Email: @Model.Email</p>
@@ -14,7 +15,7 @@
 }
 else
 {
-    <p>Вы не вошли в сиситему</p>
+    <p>Вы не вошли в систему</p>
     <a class="btn btn-primary" href="/login">Войти через гугл</a>
 
 }

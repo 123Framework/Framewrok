@@ -7,20 +7,20 @@ namespace googleLogin.Pages
 {
     public class ProfileModel : PageModel
     {
-       // public bool IsAuthenticated { get; private set; }
+        public bool IsAuthenticated { get; private set; }
         public string Name { get; private set; }
         public string Email { get; private set; }
 
         public async Task OnGetAsync()
         {
-          //  var authenticateResult = await HttpContext.AuthenticateAsync();
-            //IsAuthenticated = authenticateResult.Succeeded;
+           var authenticateResult = await HttpContext.AuthenticateAsync();
+            IsAuthenticated = authenticateResult.Succeeded;
 
-            if (User.Identity.IsAuthenticated)
+            if (IsAuthenticated)
             {
-               // var claims = authenticateResult.Principal.Claims;
-                Name = User.FindFirstValue(ClaimTypes.Name);
-                Email = User.FindFirstValue(ClaimTypes.Email);
+               var claims = authenticateResult.Principal.Claims;
+                Name = claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+                Email = claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
             }
         }
     }
