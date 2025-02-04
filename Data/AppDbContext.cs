@@ -1,15 +1,18 @@
-﻿using login.Models;
-
+﻿namespace socset.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace login.Data
+
+public class AppDbContext : IdentityDbContext
 {
-    public class AppDbContext : IdentityDbContext<Users>
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
-        public AppDbContext(DbContextOptions options) : base(options) 
-        { 
-            
-        }
+
     }
+    public DbSet<Tweet> Tweets { get; set; }
+    public DbSet<Follow> Follows { get; set; }
+    public DbSet<Like> Likes { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
+
 }
+
