@@ -16,5 +16,7 @@ namespace socset.Controllers
             var userId = User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
             return Ok(new { Message = "Welcome, your ID:" + userId });
         }
+
+
     }
 }

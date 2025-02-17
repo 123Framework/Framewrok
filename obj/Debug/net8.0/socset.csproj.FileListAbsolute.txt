@@ -1,0 +1,7 @@
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.csproj.AssemblyReference.cache
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.AssemblyInfoInputs.cache
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.AssemblyInfo.cs
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.csproj.CoreCompileInputs.cache
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\meysi\source\repos\socset\socset\obj\Debug\net8.0\socset.MvcApplicationPartsAssemblyInfo.cache
